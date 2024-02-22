@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SignIn</title>
+    <style>
+      
+        img{
+            max-width: 100%;
+            height:auto;
+            display: block;
+            margin: 0 auto;
+        }
+        button{
+          margin-top: 400px;
+          margin-left: 200px;
+        }
+        #preloader {
+            background:white url(img/preloader4.gif) no-repeat center center;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+            background-size: 30%;
+          }
+          @media (max-width: 600px){
+            #preloader {
+                background:white url(img/preloader4.gif) no-repeat center center;
+                height: 100vh;
+                width: 100%;
+                position: fixed;
+                z-index: 100;
+                background-size: 50%;
+
+              }
+          }
+        
+    </style>
+   
+</head>
+<body>
+    <div id="preloader"></div>
+    <form action="signIn.php" method="post" >
+        <img src="img/dietlogo.png" alt="logo" style="max-width: 100%; display: block; margin: 500 auto;">
+        
+        <div class="Group1" style="width: 336px; height: 320px; left: 28px; top: 200px; position: absolute;left: 50%; transform: translateX(-50%);">
+            <div class="SignIn" style="width: 231px; height: 38px; left: 3px; top: 0px; position: absolute; color: #383838; font-size: 28px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Sign in</div>
+            <div class="EmailAddress" style="width: 333px; height: 57.16px; left: 3px; top: 102px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
+                <div class="EmailAddress" style="width: 333px; height: 57.16px; position: relative">
+                    <div class="Line1" style="width: 333px; height: 0px; left: 0px; top: 57.16px; position: absolute; border: 1px #173F5F solid"></div>
+                    <div class="EmailAddress" style="width: 144px; height: 16px; left: 0px; top: 0px; position: absolute; color: #B9B9B9; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">Email Address</div><br><br>
+                    <div class="DesignTestCom" style="width:100%"><input type="email" style="outline: none; width:100%; padding-top:5px; border:none" id="emailInput"  name="email" placeholder="Email"  required></div>
+                    <div class="Tick1" style="width: 18px; height: 13px; left: 299px; top: 40px; position: absolute ; display:none ">
+                        <div class="Path" style="width: 18px; height: 13px; left: 0px; top: 0px; position: absolute;"><i class="fa-solid fa-check" ></i></div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="Password" style="width: 333px; height: 57.16px; left: 0px; top: 201.16px; position: absolute">
+                <div class="Password" style="width: 333px; height: 57.16px; left: 0px; top: -1px; position: absolute">
+                    <div class="Line1" style="width: 333px; height: 0px; left: 0px; top: 57.16px; position: absolute; border: 1px #173F5F solid"></div>
+                    <div class="Password" style="width: 144px; height: 16px; left: 0px; top: 0px; position: absolute; color: #B9B9B9; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">Password</div><br><br>
+                    <div style="width: 100%"><input type="password" id="passwordInput" style="width: 100%; padding-top:5px; outline:none; border:none" name="prn" placeholder="Password" required></div>
+                    <div class="Tick2" style="width: 18px; height: 13px; left: 330px; top: 40px; position: absolute ">
+                        <div class="Path" style="width: 18px; height: 13px; left: 0px; top: 0px; position: absolute;"><i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i></div>
+                    </div>
+                </div>
+            </div>
+          
+     <div class="ForgotPassword" style="left: 3px; top: 300px; position: absolute; color: #173F5F; font-size: 16px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"><a href="">Forgot Password ?</a></div>
+        <button type="submit">
+        <div class="SignInButton" style="width: 250px; padding-left: 25px; padding-right: 25px; padding-top: 22px; padding-bottom: 22px; left: 20.59px; top: 380px; position: absolute; background: #173F5F; border-radius: 25px; justify-content: flex-start; align-items: center; gap: 149px; display: inline-flex">
+            <div class="SignIn" style="color: white; font-size: 20.10px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">Sign In</div>
+            <div class="RightArrow1" style="width: 19.10px; height: 16.08px; position: relative">
+                <i class="fa-solid fa-arrow-right" style="color: white;"></i>
+                </div>
+            </div>
+        </button>
+        </div></div>
+    </div></form>
+    <div id="loginPopup" style="display: none;">
+        <div class="popup-content">
+            <h2>Wrong Email or Password</h2>
+            <p>Please check your email and password and try again.</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    <script>
+        // JavaScript code to toggle password visibility
+        const togglePasswordButton = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('passwordInput');
+        let passwordVisible = false;
+    
+        togglePasswordButton.addEventListener('click', function() {
+            passwordVisible = !passwordVisible;
+            passwordInput.type = passwordVisible ? 'text' : 'password';
+        }); 
+    </script>
+    <script>
+        const emailInput = document.getElementById("emailInput");
+        const tick1 = document.querySelector(".Tick1");
+    
+        emailInput.addEventListener("input", function() {
+            const email = emailInput.value;
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    
+            if (emailPattern.test(email)) {
+                tick1.style.display = "block"; // Show the Tick1 icon
+            } else {
+                tick1.style.display = "none"; // Hide the Tick1 icon
+            }
+        });
+    </script>
+    <script>
+        var loader =document.getElementById("preloader");
+    
+        window.addEventListener("load", function(){
+            loader.style.display="none"
+        }) 
+    
+          // Function to toggle the navigation bar
+    function toggleNavbar() {
+    var navbar = document.getElementById("navbarTogglerDemo01");
+    navbar.classList.toggle("show");
+    }
+    
+    </script>
+</form>
+</body>
+</html>

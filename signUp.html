@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+    body{
+        position:absolute ;
+        margin: auto;
+        width: 100%;
+        padding: 10px;
+      }
+     
+     .image-container {
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+#preloader {
+    background:white url(img/preloader4.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-size: 30%;
+  }
+  @media (max-width: 600px){
+    #preloader {
+        background:white url(img/preloader4.gif) no-repeat center center;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        background-size: 50%;
+        padding-top: 150px;
+      }
+  }
+    
+    </style>
+</head>
+<body>
+    <div id="preloader"></div>
+ <form action="signUp.php" method="post">
+
+    <div class="image-container" style="padding-top: 3%;">
+        <img src="img/dietlogo.png" alt="Logo">
+      </div>
+    
+    <div class="Group5" style="width:335.14px; height: 576px; position: absolute; top: 200px; left: 50%; transform: translateX(-50%);">
+        
+            
+
+            <div class="SignUp" style="width: 231px; height: 39px; left: 1px; top: 0px; position: absolute; color: #383838; font-size: 28px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Sign up</div>
+            <div class="Branch" style="width: 333px; height: 57px; left: 2px; top: 209px; position: absolute;">
+                <div class="Branch" style="width: 333px; height: 57.16px; left: 0px; top: 0px; position: absolute">
+                    <div class="Line1" style="width: 333px; height: 0px; left: 0px; top: 57.16px; position: absolute; border: 1px #173F5F solid"></div>
+                    <div class="Branch" style="width: 144px; height: 16px; left: 0px; top: 0px; position: absolute; color: #B9B9B9; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">Branch</div>
+                    <div class="ComputerScienceEngineering" style="left: 0px; top: 32px; position: absolute; color: #3A3A3A; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"><select id="dropdown" name="branch" style="border: none; outline:none; width:100%">
+                        <option>Select</option>
+                        <option>Computer Science & Engineering</option>
+                        <option>Electronics & Telecommunication Engineering</option>
+                        <option>Mechanical Engineering</option>
+                        <option>Electrical Engineering</option>
+                        <option>Civil Engineering</option>
+                        <option>Diploma Mechanical Engineering</option>
+                        <option>Diploma Electronics & Telecommunication Engineering</option>
+                        <option>Diploma Computer Science & Engineering</option>
+                        
+                    </select></div>
+                </div>
+                
+            </div>
+            <div class="Year" style="width:100%; height: 57px; left: 2px; top: 282px; position: absolute">
+                <div class="Year" style="width: 100%; height: 57.16px; left: 0px; top: 0px; position: absolute">
+                    <div class="Line1" style="width:100%; height: 0px; left: 0px; top: 57.16px; position: absolute; border: 1px #173F5F solid"></div>
+                    <div class="Year" style="width:100%; height: 16px; left: 0px; top: 0px; position: absolute; color: #B9B9B9; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">Year</div>
+                    <div class="TYBtech" style="width:100%; left: 0px; top: 32px; position: absolute; color: #3A3A3A; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"><select id="myDropdown" name="year" style="border: none; outline:none; width:100%">
+                        <option>Select</option>
+                        <option>F.Y.Diploma</option>
+                        <option>S.Y.Diploma</option>
+                        <option>T.Y.Diploma</option>
+                        <option>F.Y.BTech</option>
+                        <option>S.Y.BTech</option>
+                        <option>T.Y.BTech</option>
+                        <option>B.Tech</option>
+                    </select></div>
+                </div>
+               
+            </div>
+            <div class="Prn" style="width: 333px; height: 57px; left: 2.14px; top: 355px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
+                <div class="Year" style="width: 333px; height: 57.16px; position: relative">
+                    <div class="Line1" style="width: 333px; height: 0px; left: 0px; top: 57.16px; position: absolute; border: 1px #173F5F solid"></div>
+                    <div class="Prn" style="width: 144px; height: 16px; left: 0px; top: 0px; position: absolute; color: #B9B9B9; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">PRN (Password)</div>
+                    <div style="width:100%; left: 0px; top: 38px; position: absolute; color: #3A3A3A; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"><input type="text"  name="prn" style=" border:none; outline:none; width:100%"></div>
+                </div>
+            </div>
+            <div class="EmailAddress" style="width: 333px; height: 57.16px; left: 2px; top: 61px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
+                <div class="EmailAddress" style="width: 333px; height: 57.16px; position: relative">
+                    <div class="Line1" style="width: 333px; height: 0px; left: 0px; top: 57.16px; position: absolute; border: 1px #173F5F solid"></div>
+                    <div class="EmailAddress" style="width: 100%; height: 16px; left: 0px; top: 0px; position: absolute; color: #B9B9B9; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">Email Address (Username)</div>
+                    <div class="DesignTestCom" style="width: 100%; height: 16px; left: 0px; top: 38px; position: absolute; color: #3A3A3A; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"><input type="email" name="email" style= " border:none; outline-style: none; width:100%"></div>
+                    
+                </div>
+            </div>
+            <div class="Name" style="width: 333px; height: 57.16px; left: 2px; top: 135px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
+                <div class="Name" style="width: 333px; height: 57.16px; position: relative">
+                    <div class="Line1" style="width: 333px; height: 0px; left: 0px; top: 57.16px; position: absolute; border: 1px #173F5F solid"></div>
+                    <div class="Name" style="width: 144px; height: 16px; left: 0px; top: 0px; position: absolute; color: #B9B9B9; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word">Name</div>
+                    <div class="Xyz" style="width: 100%; height: 16px; left: 0px; top: 38px; position: absolute; color: #3A3A3A; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"><input type="text" name="name"  required style="  border:none;  outline:none; width:100%"></div>
+                </div>
+            </div>
+            <button type="submit" style="border: none; outline:none; background:none" class="Next">
+            <div class="NextButton" style="width: 80%; height:auto;  padding-left: 25px; padding-right: 25px; padding-top: 22px; padding-bottom: 22px; left: 20.59px; top: 450px; position: absolute; background: #173F5F; border-radius: 25px; justify-content: flex-start; align-items: center; gap: 172px; display: inline-flex">
+                <div class="Next" style="color: white; font-size: 20.10px; font-family: Montserrat; font-weight: 400;">Next<i class="fa-solid fa-arrow-right" style="color:white; margin-left: 190px;"></i></div>
+               
+            </button>
+                </div>
+                <script>
+                    var loader =document.getElementById("preloader");
+            
+                    window.addEventListener("load", function(){
+                        loader.style.display="none"
+                    }) 
+            
+                      // Function to toggle the navigation bar
+              function toggleNavbar() {
+                var navbar = document.getElementById("navbarTogglerDemo01");
+                navbar.classList.toggle("show");
+              }
+            
+                </script>
+       
+  
+
+</form>
+</body>
+</html>
